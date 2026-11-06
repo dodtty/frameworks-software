@@ -1,0 +1,46 @@
+class TicketSuper {
+    public static void main(String[] args) {
+        final double TAZA_IVA = 0.16;
+
+        // Datos de la compra (arreglos paralelos)
+        String[] productos = {"Jugo de mango 1.5L", "Trikitrakes", "Pasta esp.600gm", "Salsa de tomate", "Chetos flaming hot", "Coricos 150gm"};
+        double[] precios = {38.60, 23.00, 46.90, 53.20, 27.50, 16.75};
+        int[] cantidades = {1,2,1,2,3,3};
+
+        double subtotal = 0;
+
+        // Primero*
+        System.out.println("=======================================================");
+        System.out.println("                       SuperMarket");
+        System.out.println("=======================================================");
+        System.out.printf("%-18s %4s %8s %9s%n", "Producto", "Cant", "Precio", "Importe");
+        System.out.println("-------------------------------------------------------");
+
+        //Segundo*
+        for (int i=0; i<productos.length; i++){
+            double importe = precios[i] * cantidades[i];
+            subtotal += importe;
+            System.out.printf("%-18s %4s %8s %9s%n", productos[i], cantidades[i], precios[i], importe);
+        }
+
+        //Tercero*
+        double iva = subtotal * TAZA_IVA;
+        double total = subtotal + iva;
+
+        //Cuarto*
+        System.out.println("-------------------------------------------------------");
+        System.out.printf("%-32s %9.2f%n","Subtotal:", subtotal );
+        System.out.printf("%-32s %9.2f%n","IVA(16%):", iva );
+        System.out.printf("%-32s %9.2f%n","Total:", total );
+        
+        
+        // Primero: imprimir el encabezado del ticket
+        //Segundo: recorrer los productos con un for
+        // - calcular el importe (precio * cantidad)
+        // - acumularlo en el subtotal
+        // - imprimir la linea del producto
+
+        // Tercero: Calcular el IVA y total
+        // Cuarto: Imprimir subtotal, IVA y total con 2 decimales
+    }
+}
