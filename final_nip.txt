@@ -1,0 +1,81 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        final int NIP_CORRECTO = 1009; 
+        final int MAX_INTENTOS = 3;
+        double saldo = 50000.00;
+
+        int NumerosDepositos = 0;
+        int NumerosRetiros = 0;
+        double TotalRetirado = 0;
+        double TotalDepositado = 0;
+        
+        System.out.println("=================================");
+        System.out.println("         Banco Azteca");
+        System.out.println("=================================");
+        int Intentos = 0;
+        boolean Acceso = false; 
+while(Intentos < MAX_INTENTOS && !Acceso){
+            System.out.println("Ingresa tu NIP: ");
+    int nip = sc.nextInt();
+    Intentos ++;
+    if(nip == NIP_CORRECTO){
+        Acceso = true; 
+        System.out.println("Bienvenido!");
+    }else{
+        System.out.println("NIP incorrecto. Intentos restantes: " + (MAX_INTENTOS - Intentos));
+    }
+ }
+    if(!Acceso){
+                    System.out.println("Tarjeta Bloqueda, comuniquese con su banco");
+        return;
+    }
+
+        int option;
+        do{
+        System.out.println();
+        System.out.println("1.Consultar saldo");
+        System.out.println("2.Depositar");
+        System.out.println("3.Retirar");
+        System.out.println("4.Salir");
+            option = sc.nextInt();
+            switch(option){
+                case 1:
+                    System.out.printf("Saldo actual: $%.2f\n", saldo);
+                    break;
+                case 2:
+                    System.out.println("Ingresa la cantidad a depositar: ");
+                    double deposito = sc.nextDouble();
+                    if(deposito > 0 && deposito <= 500000){
+                        saldo += deposito;
+                        NumerosDepositos++;
+                        TotalDepositado += deposito;
+                        System.out.printf("Deposito exitoso. Nuevo saldo: $%.2f\n", saldo);
+                    }else{
+                        System.out.println("Cantidad invalida.");
+                    }
+                    break;
+                case 3:
+                    System.out.println("Ingresa la cantidad a retirar: ");
+                    double retiro = sc.nextDouble();
+                    if(retiro > 0 && retiro <= saldo){
+                        saldo -= retiro;
+                        NumerosRetiros++;
+                        TotalRetirado += retiro;
+                        System.out.printf("Retiro exitoso. Nuevo saldo: $%.2f\n", saldo);
+                    }else{
+                        System.out.println("Cantidad invalida o saldo insuficiente.");
+                    }
+                    break;
+                case 4:
+                    System.out.println("Gracias por su visita");
+                    break;
+                default:
+                    System.out.println("Opcion invalida, inserte de nuevo");
+            }
+        }while(option!=4);
+        sc.close();
+        
+}
+}
