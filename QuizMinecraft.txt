@@ -1,0 +1,243 @@
+import java.util.Scanner;
+
+public class QuizBasico {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int vida = 80;
+        String  barra = "########";
+        
+        System.out.println("=== BIENVENIDO AL QUIZ DE MINECRAFT ===");
+        System.out.println("=== TU VIDA INICIAL ES DE 80===");
+
+        // Pregunta 1
+        System.out.println("\n1. Nombre del mundo principal de minecraft?");
+        System.out.println("a) Verity");
+        System.out.println("b) End");
+        System.out.println("c) Nether");
+        System.out.println("d) overworld");
+        System.out.print("Tu respuesta (a, b, c o d): ");
+        String respuesta1 = sc.nextLine().trim().toLowerCase();
+        
+        
+        if (respuesta1.equals("d")) {
+            System.out.println("Correcto!");
+            System.out.println("Vida restante: " + barra);
+        } else {
+            System.out.println("Incorrecto.");
+            vida = vida-20;
+            barra = barra.substring(0,barra.length()-2);
+            System.out.println("Vida restante: " + barra);
+        }
+            if(vida <= 0){
+                System.out.println("=========================");
+                System.out.print("       Perdiste nuv");
+                return;
+            }
+
+        //Pregunta 2
+        System.out.println("\n2. Cual es la nueva dimension de minecraft?");
+        System.out.println("a) The sift");
+        System.out.println("b) El cielo");
+        System.out.println("c) Nether");
+        System.out.println("d) El vacio");
+        System.out.print("Tu respuesta (a, b, c o d): ");
+        String respuesta2 = sc.nextLine().trim().toLowerCase();
+        
+        if (respuesta2.equals("a")) {
+            System.out.println("Correcto!");
+            System.out.println("Vida restante: " + barra);
+        } else {
+            System.out.println("Incorrecto");
+            vida = vida-20;
+            barra = barra.substring(0,barra.length()-2);
+            System.out.println("Vida restante: " + barra);
+        }
+            if(vida <= 0){
+                System.out.println("=========================");
+                System.out.print("       Perdiste nuv");
+                return;
+            }
+
+        //Pregunta 3
+        System.out.println("\n3. En donde empezado la batalla?");
+        System.out.println("a) En un mundo ovalado");
+        System.out.println("b) En un mundo muy cuadrado");
+        System.out.println("c) En la tierra");
+        System.out.println("d) En verityland");
+        System.out.print("Tu respuesta (a, b, c o d): ");
+        String respuesta3 = sc.nextLine().trim().toLowerCase();
+        
+        if (respuesta3.equals("b")) {
+            System.out.println("Correcto!");
+            System.out.println("Vida restante: " + barra);
+        } else {
+            System.out.println("Incorrecto.");
+            vida = vida-20;
+            barra = barra.substring(0,barra.length()-2);
+            System.out.println("Vida restante: " + barra);
+        }
+            if(vida <= 0){
+                System.out.println("=========================");
+                System.out.print("       Perdiste nuv");
+                return;
+            }
+
+        //Pregunta 4
+        System.out.println("\n4. Antigua nombre de la manzana dorada encantada?");
+        System.out.println("a) Manzana fuerte");
+        System.out.println("b) Manzana requiem");
+        System.out.println("c) Manzana de notch");
+        System.out.println("d) Manzana pro max");
+        System.out.print("Tu respuesta (a, b, c o d): ");
+        String respuesta4 = sc.nextLine().trim().toLowerCase();
+        
+       if (respuesta4.equals("c")) {
+            System.out.println("Correcto!");
+            System.out.println("Vida restante: " + barra);
+        } else {
+            System.out.println("Incorrecto.");
+            vida = vida-20;
+            barra = barra.substring(0,barra.length()-2);
+            System.out.println("Vida restante: " + barra);
+        }
+            if(vida <= 0){
+                System.out.println("=========================");
+                System.out.print("       Perdiste nuv");
+                return;
+            }
+        
+
+        //Pregunta 5
+        System.out.println("\n5. Cuantas versiones distintas tiene minecraft?");
+        System.out.println("a) 2");
+        System.out.println("b) 3");
+        System.out.println("c) 4");
+        System.out.println("d) 5");
+        System.out.print("Tu respuesta (a, b, c o d): ");
+        String respuesta5 = sc.nextLine().trim().toLowerCase();
+        
+        if (respuesta5.equals("c")) {
+            System.out.println("Correcto!");
+            System.out.println("Vida restante: " + barra);
+        } else {
+            System.out.println("Incorrecto.");
+            vida = vida-20;
+            barra = barra.substring(0,barra.length()-2);
+            System.out.println("Vida restante: " + barra);
+        }
+            if(vida <= 0){
+                System.out.println("=========================");
+                System.out.print("       Perdiste nuv");
+                return;
+            }
+        
+        
+
+        //Pregunta 6
+        System.out.println("\n6. Cual era el nombre original de minecraft?");
+        System.out.println("a) Gamecube");
+        System.out.println("b) Minar y craftear");
+        System.out.println("c) Cuadrado el juego");
+        System.out.println("d) Cave game");
+        System.out.print("Tu respuesta (a, b, c o d): ");
+        String respuesta6 = sc.nextLine().trim().toLowerCase();
+        
+       if (respuesta6.equals("d")) {
+            System.out.println("Correcto!");
+            System.out.println("Vida restante: " + barra);
+        } else {
+            System.out.println("Incorrecto.");
+            vida = vida-20;
+            barra = barra.substring(0,barra.length()-2);
+            System.out.println("Vida restante: " + barra);
+        }
+            if(vida <= 0){
+                System.out.println("=========================");
+                System.out.print("       Perdiste nuv");
+                return;
+            }
+       
+       
+
+        //Pregunta 7
+        System.out.println("\n7. Cual fue el primer youtuber en conseguir bedrock en survival vanila?");
+        System.out.println("a) Bobicraft");
+        System.out.println("b) ElRichMC");
+        System.out.println("c) Vegeta777");
+        System.out.println("d) Mikecrack");
+        System.out.print("Tu respuesta (a, b, c o d): ");
+        String respuesta7 = sc.nextLine().trim().toLowerCase();
+        
+      if (respuesta7.equals("b")) {
+            System.out.println("Correcto!");
+            System.out.println("Vida restante: " + barra);
+        } else {
+            System.out.println("Incorrecto.");
+            vida = vida-20;
+            barra = barra.substring(0,barra.length()-2);
+            System.out.println("Vida restante: " + barra);
+        }
+            if(vida <= 0){
+                System.out.println("=========================");
+                System.out.print("       Perdiste nuv");
+                return;
+            }
+        
+        
+
+        //Pregunta 8
+        System.out.println("\n8. Por que notch vendio minecraft a microsoft?");
+        System.out.println("a) Por que si");
+        System.out.println("b) Por el dinero");
+        System.out.println("c) Bodrio no?");
+        System.out.println("d) Por la presion y problemas de la fama");
+        System.out.print("Tu respuesta (a, b, c o d): ");
+        String respuesta8 = sc.nextLine().trim().toLowerCase();
+        
+       if (respuesta8.equals("d")) {
+            System.out.println("Correcto!");
+            System.out.println("Vida restante: " + barra);
+        } else {
+            System.out.println("Incorrecto.");
+            vida = vida-20;
+            barra = barra.substring(0,barra.length()-2);
+            System.out.println("Vida restante: " + barra);
+        }
+            if(vida <= 0){
+                System.out.println("=========================");
+                System.out.print("       Perdiste nuv");
+                return;
+            }
+        
+
+        //Pregunta 9
+        System.out.println("\n9. Cual es el youtuber de minecaft con mas suscriptores de habla hispana?");
+        System.out.println("a) Mikecrack");
+        System.out.println("b) Willyrex");
+        System.out.println("c) Invictor");
+        System.out.println("d) Vegetta777");
+        System.out.print("Tu respuesta (a, b, c o d): ");
+        String respuesta9 = sc.nextLine().trim().toLowerCase();
+        
+        if (respuesta9.equals("a")) {
+            System.out.println("Correcto!");
+            System.out.println("Vida restante: " + barra);
+        } else {
+            System.out.println("Incorrecto.");
+            vida = vida-20;
+            barra = barra.substring(0,barra.length()-2);
+            System.out.println("Vida restante: " + barra);
+        }
+            if(vida <= 0){
+                System.out.println("=========================");
+                System.out.print("       Perdiste nuv");
+                return;
+            }else{
+                System.out.println("=========================");
+                System.out.println("       Ganaste! :D");
+                System.out.println("Vida final: " + vida);
+                return;
+            }
+            }
+        }
+        
